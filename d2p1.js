@@ -1031,7 +1031,7 @@ const input = [
 ];
 
 const validPasswords = (passwords) => {
-
+  const start = Date.now();
   // loop through passwords
   // split each string into an array
   // check validity
@@ -1058,6 +1058,8 @@ const validPasswords = (passwords) => {
 
   })
 
+  const end = Date.now();
+  console.log("Time: ", end - start);
   return valid.length
 
 };
@@ -1074,7 +1076,7 @@ const testInput = [
   "1-5 c: cwbbccccccb"
 ]
 
-console.log(validPasswords(testInput));
+// console.log(validPasswords(testInput));
 
 // code of advent puzzle answer
 console.log(validPasswords(input));
