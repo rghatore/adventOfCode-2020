@@ -67,7 +67,6 @@ const myId = (seats) => {
   const ids = seats.sort((a, b) => a - b);
 
   const mySeatId = ids.find((item, index, array) => {
-    // return (item - 1 !== array[index - 1]) && (item + 1 !== array[index + 1]);
     return (item + 1 !== array[index + 1])
   })
 
